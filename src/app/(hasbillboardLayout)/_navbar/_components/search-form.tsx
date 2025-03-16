@@ -106,9 +106,7 @@ function SearchForm({ setIsShowSearch }: SearchFormProps) {
         <div className="flex justify-between lg:ml-10 items-center pt-9 lg:pb-12 lg:gap-x-48">
           <div className="hidden lg:block"></div>
           <div className="flex-1">
-            <div className="text-[#707072] text-sm">
-              History Search - Sau này sẽ dùng Machine Learning check xem cái nào được search nhiều nhất{" "}
-            </div>
+            <div className="text-[#707072] text-sm">History Search</div>
             <div className="mt-4 animate-opacity">
               {itemsSearch.slice(0, 4).map((item) => (
                 <div

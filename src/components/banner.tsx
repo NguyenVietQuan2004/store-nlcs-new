@@ -19,7 +19,7 @@ function Banner({ billboardBST }: BannerProps) {
           !isShowBanner && "origin-bottom-right -rotate-90"
         }   cursor-pointer pl-4 text-white text-[22px] tracking-widest font-bold`}
       >
-        <div className="">CHÀO MỪNG BST </div>
+        <div className="">WELCOME COLL </div>
         <ArrowLeftIcon />
       </div>
       {isShowBanner && (

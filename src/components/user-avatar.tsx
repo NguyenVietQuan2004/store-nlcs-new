@@ -9,6 +9,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 function UserAvatar() {
   const [userName, setUserName] = useState("");
@@ -66,20 +67,28 @@ function UserAvatar() {
               </div>
             )}
           </PopoverTrigger>
-          <PopoverContent className="w-auto p-0">
-            <Button
-              className={buttonVariants({
-                variant: "outline",
-                className: "text-black",
-              })}
-              onClick={handleLogOut}
-            >
-              Sign out
-            </Button>
+          <PopoverContent className="w-auto mt-1 p-0">
+            <div className="flex flex-col gap-2 p-2">
+              <Link
+                href={`/user-order`}
+                className={cn(buttonVariants({ variant: "outline", className: "text-black" }), "")}
+              >
+                Your orders
+              </Link>
+              <Button
+                className={buttonVariants({
+                  variant: "outline",
+                  className: "text-black",
+                })}
+                onClick={handleLogOut}
+              >
+                Sign out
+              </Button>
+            </div>
           </PopoverContent>
         </Popover>
       ) : (
-        <Link href="/auth"> Đăng nhập </Link>
+        <Link href="/auth"> Login </Link>
       )}
     </div>
   );

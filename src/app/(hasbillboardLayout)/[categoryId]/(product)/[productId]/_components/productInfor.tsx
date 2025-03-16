@@ -126,7 +126,7 @@ function ProductInfor({ product, isShowChinhSach = true }: ProductInforProps) {
           {objectPriceNotEmptyAmount?.stock || (0 > 0 && "(còn hàng)")}
         </div>
         <Separator className="mt-1 mb-5" />
-        <CodeStar maxAmount={currentSize.maxAmount!} id={product?._id} />
+        <CodeStar sales={product.sales} maxAmount={currentSize.maxAmount!} id={product?._id} />
         {/* <div className="mb-3 font-semibold">{formattedPrice(currentSize.price)}</div> */}
         <div className="mb-3 font-semibold">
           {product?.sales ? (

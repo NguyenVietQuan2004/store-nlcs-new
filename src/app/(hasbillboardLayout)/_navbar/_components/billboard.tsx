@@ -4,9 +4,9 @@ import Autoplay from "embla-carousel-autoplay";
 import { BillboardType } from "@/Type/BillboardTypes";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Button, buttonVariants } from "@/components/ui/button";
-import Link from "next/link";
 import { CategoryType } from "@/Type/CategoryTypes";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 // function Billboard({ billboard }: { billboard: BillboardType | undefined | BillboardType[] }) {
 function Billboard({
@@ -58,9 +58,12 @@ function Billboard({
                           {true && (
                             <Link
                               href={`/${category?._id}`}
-                              className={cn(buttonVariants({ variant: "default", size: "lg" }), "mt-6 rounded-full")}
+                              className={cn(
+                                buttonVariants({ variant: "default", size: "lg" }),
+                                "mt-6 rounded-full z-10"
+                              )}
                             >
-                              Shop
+                              Shop now
                             </Link>
                           )}
                         </div>

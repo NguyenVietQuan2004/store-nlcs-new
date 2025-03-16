@@ -115,6 +115,7 @@ function PreviewCard() {
                   </Fragment>
                 );
               })}
+              {items.length === 0 && <div>Cart is empty</div>}
             </div>
             <div>
               <Separator />
