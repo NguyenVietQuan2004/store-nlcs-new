@@ -50,7 +50,7 @@ function Amount({ setCurrentSize, currentSize }: AmountProps) {
           </Button>
         </div>
       </div>
-      <div className="ml-auto text-[#28a745] text-sm">(Còn {currentSize.maxAmount} sản phẩm)</div>
+      <div className="ml-auto text-[#28a745] text-sm">({currentSize.maxAmount} products left)</div>
     </div>
   );
 }

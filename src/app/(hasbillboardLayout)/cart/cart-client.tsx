@@ -273,7 +273,7 @@ function CartClientNotSuspen() {
         <div className="bg-zinc-100 p-2 lg:p-6 rounded-lg border border-">
           <div className="text-2xl font-medium mb-6">Summary</div>
           <div className="my-4 flex justify-between">
-            <div>Subtotal </div>
+            <div>Subtotal</div>
             <div className="font-semibold">{formattedPrice(totalPrice)}</div>
           </div>{" "}
           <div className="my-4 flex justify-between">
@@ -287,7 +287,7 @@ function CartClientNotSuspen() {
           </div>
           <Separator className="my-6" />
           <Button size={"lg"} onClick={handleCheckout} className="py-8 w-full rounded-full">
-            Check out
+            Proceed to Order
           </Button>
         </div>
       </div>

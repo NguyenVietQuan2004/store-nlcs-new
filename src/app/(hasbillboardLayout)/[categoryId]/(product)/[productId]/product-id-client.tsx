@@ -66,13 +66,13 @@ function ProductIdClient({ data }: ProductIdClientProps) {
           <ListProductCard gridCols={gridCols} listProduct={productRelative} />
         </div>
         <div>
-          <h2
+          {/* <h2
             className="relative text-xl font-bold mt-16 mb-10 pb-4 border-b-2 before:content-['']
         before:w-[190px] before:h-[2px] before:absolute before:bg-black before:top-full before:left-0 "
           >
             Product Details
-          </h2>
-          {video}
+          </h2> */}
+          {/* {video} */}
         </div>
       </div>
     </div>

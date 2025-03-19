@@ -72,9 +72,10 @@ function UpdateSizeModalInfo({ productOrder, onClose }: UpdateSizeModalInfoProps
             variants={productOrder.product.variants}
             product_variants={productOrder.product.product_variants}
           />
+          <div className="mt-10"></div>
           {/* <Colors currentSize={currentSize} setCurrentSize={setCurrentSize} /> */}
           <Button className="w-full" onClick={handleUpdate}>
-            Update Size
+            Update
           </Button>
         </div>
       </div>

@@ -13,7 +13,7 @@ function CodeStar({ maxAmount, id, sales }: { maxAmount: number; id: string; sal
   if (!isMounted) return null;
   return (
     <div className="flex justify-between items-center">
-      <div> Mã sản phẩm: {id?.slice(0, 7)} </div>
+      <div> Code: {id?.slice(0, 7)} </div>
       {/* <div className="flex items-center">
         {createUniqueArray(maxAmount % 5).map((val: any) => (
           <StarIcon key={val} />
@@ -23,7 +23,7 @@ function CodeStar({ maxAmount, id, sales }: { maxAmount: number; id: string; sal
         ))}
         <span className="text-sm font-light"> (1 đánh giá)</span>
       </div> */}
-      <span className="ml-4 text-red-500">Sale: {sales}%</span>
+      {sales > 0 && <span className="ml-4 text-[#007D48]">Sale: {sales}%</span>}
     </div>
   );
 }

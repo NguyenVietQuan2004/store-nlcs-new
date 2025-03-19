@@ -10,6 +10,7 @@ interface Card3Props {
   productHighestSales: ListProductResType["data"]["listProduct"] | undefined;
 }
 function Card3({ productBestSeller, productHighestSales }: Card3Props) {
+  console.log(productBestSeller?.length, "aaa");
   const [numbProductShow, setNumbProductShow] = useState(3);
   useEffect(() => {
     const handleResize = () => {
@@ -53,7 +54,7 @@ function Card3({ productBestSeller, productHighestSales }: Card3Props) {
 
       <div className=" flex flex-col lg:grid grid-cols-2 gap-y-6 lg:mt-12 lg:gap-x-2">
         <div className="p-5 bg-white rounded-2xl mt-auto">
-          <h4 className="text-xl font-medium mb-4 text-center">Deals on best sellers</h4>
+          <h4 className="text-xl font-medium mb-4 text-center">Best sellers</h4>
           {/* <div className="relative ">
           <Image
             alt=""
@@ -72,7 +73,7 @@ function Card3({ productBestSeller, productHighestSales }: Card3Props) {
         </div>
 
         <div className="p-5 bg-white rounded-2xl mt-auto">
-          <h4 className="text-xl font-medium mb-4 text-center">Product Highest Sales</h4>
+          <h4 className="text-xl font-medium mb-4 text-center">Top Sales</h4>
           {/* <div className="relative ">
           <Image
             alt=""

@@ -85,10 +85,10 @@ function ProductInfor({ product, isShowChinhSach = true }: ProductInforProps) {
             height={1000}
             className="w-full aspect-square object-cover rounded-lg select-none"
           />
-          <div className="absolute left-6 top-6 flex items-center bg-white px-4 py-2 text-[#111111] font-medium rounded-full">
+          {/* <div className="absolute left-6 top-6 flex items-center bg-white px-4 py-2 text-[#111111] font-medium rounded-full">
             <StarIcon />
             <div className="ml-1">High Rated</div>
-          </div>
+          </div> */}
         </div>
         <Carousel
           opts={{

@@ -103,7 +103,7 @@ function CheckoutForm() {
             className="w-full bg-blue-500 text-white py-2 rounded font-bold hover:bg-blue-600"
             disabled={loading}
           >
-            {loading ? "Processing..." : "Pay Now"}
+            {loading ? "Processing..." : "Confirm Order"}
           </button>
         </form>
       </Form>

@@ -63,7 +63,10 @@ const OrderList = () => {
                     />
                   )}
                   <h4 className="text-lg">{item.product.name}</h4>
-                  <p className="text-gray-700">Price: {formattedPrice(item.snapshot_price)}</p>
+                  <p className="text-gray-700">
+                    Price:{" "}
+                    {formattedPrice(item.snapshot_price * item.quantity * ((100 - (item.product.sales || 0)) / 100))}
+                  </p>
                   <p className={`text-sm ${item.quantity === 0 ? "text-red-500" : "text-green-600"}`}>
                     {item.quantity > 0 ? `Quantity: ${item.quantity}` : "Out of stock"}
                   </p>

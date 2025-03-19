@@ -127,9 +127,9 @@ function Sizes({ currentSize, setCurrentSize, variants, product_variants }: Size
           </Button>
         );
       })} */}
-      <Link href="/size" className=" text-[#2D68A8] flex items-center gap-1 text-sm font-light  self-end">
+      {/* <Link href="/size" className=" text-[#2D68A8] flex items-center gap-1 text-sm font-light  self-end">
         <Ruler size={15} className="text-[#707072] rotate-90" /> See Size Guide
-      </Link>
+      </Link> */}
     </div>
   );
 }
