@@ -23,7 +23,7 @@ function Amount({ setCurrentSize, currentSize }: AmountProps) {
   return (
     <div className="flex items-center my-6 select-none gap-2">
       <div className="flex items-center">
-        <span className="mr-8">Quantity</span>
+        <span className="mr-8">Số lượng</span>
         <div className="flex border border-collapse rounded-tl-xl rounded-br-xl ">
           <Button
             onClick={handleMinusAmount}
@@ -50,7 +50,7 @@ function Amount({ setCurrentSize, currentSize }: AmountProps) {
           </Button>
         </div>
       </div>
-      <div className="ml-auto text-[#28a745] text-sm">({currentSize.maxAmount} products left)</div>
+      <div className="ml-auto text-[#28a745] text-sm">(còn {currentSize.maxAmount} sản phẩm)</div>
     </div>
   );
 }

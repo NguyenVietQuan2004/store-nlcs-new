@@ -60,7 +60,7 @@ function CartClientNotSuspen() {
   useEffect(() => {
     if (searchParams.get("success")) {
       toast({
-        title: "Order sucess",
+        title: "Đặt hàng thành công",
         variant: "success",
       });
     }
@@ -217,21 +217,21 @@ function CartClientNotSuspen() {
         <div className="bg-zinc-100 p-2 lg:p-6 rounded-lg border border-">
           <div className="text-2xl font-medium mb-6">Summary</div>
           <div className="my-4 flex justify-between">
-            <div>Subtotal</div>
+            <div>Tạm tính</div>
             <div className="font-semibold">{formattedPrice(totalPrice)}</div>
           </div>{" "}
           <div className="my-4 flex justify-between">
-            <div>Estimated Delivery & Handling</div>
+            <div>Ước tính giao hàng</div>
             <div className="font-semibold">Free</div>
           </div>
           <Separator className="my-6" />
           <div className="my-4 flex justify-between">
-            <div>Total</div>
+            <div>Tổng cộng</div>
             <div className="font-semibold">{formattedPrice(totalPrice)}</div>
           </div>
           <Separator className="my-6" />
           <Button size={"lg"} onClick={handleCheckout} className="py-8 w-full rounded-full">
-            Proceed to Order
+            Tiến hành đặt hàng
           </Button>
         </div>
       </div>
@@ -246,9 +246,11 @@ function CartClient() {
     <Suspense fallback={<div>loading.....</div>}>
       <CartClientNotSuspen />
       <div className="px-4 lg:px-[50px]">
-        <h2 className="text-[26px] font-medium mt-[40px] mb-6 ">You might also like</h2>
+        <h2 className="text-[26px] font-medium mt-[40px] mb-6 ">Bạn cũng có thể thích</h2>
         {!itemsFavourite.length && (
-          <div className="font-semibold text-center underline">Items added to your Favourites will be saved here.</div>
+          <div className="font-semibold text-center underline">
+            Các mục được thêm vào Yêu thích của bạn sẽ được lưu tại đây.
+          </div>
         )}
         <ListProductCard scroll={true} gridCols={3} listProduct={itemsFavourite} />
       </div>

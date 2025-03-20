@@ -17,11 +17,11 @@ interface ResgisterFormProps {
 }
 const formSchema = z.object({
   fullname: z.string().min(4, {
-    message: "Name must be at least 4 characters.",
+    message: "Tên phải chứa ít nhất 4 ký tự",
   }),
   email: z.string().email(),
   password: z.string().min(6, {
-    message: "Pass must be at least 6 characters.",
+    message: "Mật khẩu phải chứa ít nhất 6 ký tự",
   }),
   phone_number: z.string(),
   method: z.string(),
@@ -49,7 +49,7 @@ function RegisterForm({ isSignUp, setIsSignUp }: ResgisterFormProps) {
       form.reset();
       setIsSignUp(false);
       toast({
-        title: "Register success.",
+        title: "Đăng ký thành công.",
         variant: "success",
       });
     } catch (error) {
@@ -64,10 +64,9 @@ function RegisterForm({ isSignUp, setIsSignUp }: ResgisterFormProps) {
     <div
       className={`lg:rounded-r-md absolute ${
         isSignUp ? "lg:right-[10%]  xl:right-[20%] 2xl:right-[25%] opacity-100 z-40" : "lg:right-1/2 opacity-0 z-30"
-      } lg:top-1/2 inset-0 lg:inset-auto lg:w-[40%] xl:w-[30%] 2xl:w-[25%] sm:p-[100px] md:p-[200px] lg:p-10 lg:py-0 flex flex-col justify-center lg:block  p-2  w-full  lg:-translate-y-1/2   transition-all duration-1000  bg-white   min-h-[600px]  flex-1  `}
+      } lg:top-1/2 inset-0 lg:inset-auto lg:w-[40%] xl:w-[30%] 2xl:w-[25%] sm:p-[100px] md:p-[200px] lg:p-10 lg:py-0  flex flex-col justify-center  p-2  w-full  lg:-translate-y-1/2   transition-all duration-1000  bg-white   min-h-[600px]  flex-1  `}
     >
-      <h2 className="text-[26px]  text-center font-extrabold mt-10 sm:text-3xl">Sign up</h2>
-      <div className="text-center text-sm font-medium sm:text-base">Or use your email for registration</div>
+      <h2 className="text-[26px]  text-center font-extrabold mt-10 sm:text-3xl">Đăng ký</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="mt-6 lg:mt-10 flex gap-y-2 flex-col items-center">
           <FormField

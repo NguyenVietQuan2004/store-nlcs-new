@@ -15,21 +15,22 @@ import ProductFeature from "@/app/(hasbillboardLayout)/(root)/_components/produc
 
 const text = [
   {
-    text1: "Member Product",
-    text3: "Shop",
-    text2: "Your Exclusive Access",
+    text1: "Bộ Sưu Tập Thành Viên",
+    text3: "Mua Ngay",
+    text2: "Ưu Đãi Độc Quyền Dành Cho Bạn",
   },
   {
-    text1: "Nike By You",
-    text3: "Explore",
-    text2: "Your Customisation Service",
+    text1: "Thiết Kế Theo Phong Cách Riêng",
+    text3: "Khám Phá",
+    text2: "Cá Nhân Hóa Phong Cách",
   },
   {
-    text1: "Member Rewards",
-    text3: "Customise",
-    text2: "How We Say Thank You",
+    text1: "Quà Tặng Đặc Biệt",
+    text3: "Nhận Ngay",
+    text2: "Tri Ân Khách Hàng Thân Thiết",
   },
 ];
+
 export default async function Home() {
   let response: ListProductResType | null = null;
   let data: ImagesHomePageResType | null = null;
@@ -47,7 +48,7 @@ export default async function Home() {
   }
   return (
     <div>
-      <h2 className="text-3xl font-medium mt-2 lg:mt-8 mb-4 lg:mb-10 text-[#606060] px-2 lg:px-20">Featured Product</h2>
+      <h2 className="text-3xl font-medium mt-2 lg:mt-8 mb-4 lg:mb-10 text-[#606060] px-2 lg:px-20">Sản phẩm nổi bật</h2>
       {!response || !response?.data?.listProduct?.length ? (
         <div className="text-center my-4 px-20">No results found</div>
       ) : (
@@ -83,11 +84,11 @@ export default async function Home() {
       </div>
 
       {/* <Insurance backgroundInsurance={data?.data?.ImagesHomePage?.background_insurance} /> */}
-      <h2 className="text-3xl font-medium mt-8 mb-10 text-[#606060] px-2 lg:px-20">New Product</h2>
+      <h2 className="text-3xl font-medium mt-8 mb-10 text-[#606060] px-2 lg:px-20">Sản phẩm mới nhất</h2>
       {!data || !data?.data?.listProductNewDiscover?.length ? (
-        <div className="text-center my-4 px-20">No results found</div>
+        <div className="text-center my-4 px-20">Không tìm thấy kết quả</div>
       ) : (
-        <Suspense fallback={<div>loading...</div>}>
+        <Suspense fallback={<div>Đang tải...</div>}>
           <ProductFeature scroll={true} listProduct={data?.data.listProductNewDiscover} title="new" />
         </Suspense>
       )}

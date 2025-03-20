@@ -3,7 +3,7 @@ import FavouriteClient from "@/app/(hasbillboardLayout)/favourite/favourite-clie
 function Cart() {
   return (
     <div className="p-2 pt-20 lg:p-20">
-      <h2 className="text-2xl font-medium my-10">Manage Your Favourites</h2>
+      <h2 className="text-2xl font-medium my-10">Quản lí mục yêu thích</h2>
       <FavouriteClient />
     </div>
   );

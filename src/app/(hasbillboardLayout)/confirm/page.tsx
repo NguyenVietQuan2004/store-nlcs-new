@@ -11,7 +11,7 @@ import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
-  fullName: z.string().min(2, "Full name must be at least 2 characters."),
+  fullName: z.string().min(2, "Tên phải chứa ít nhất 2 ký tự"),
   email: z.string().email("Invalid email address."),
   phone: z.string().min(10, "Phone number must be at least 10 digits."),
   address: z.string().min(5, "Address must be at least 5 characters."),
@@ -53,12 +53,12 @@ function CheckoutForm() {
       const res = await response.json();
       if (res.statusCode === 401) {
         toast({
-          title: "Insufficient quantity please try again later",
+          title: "Số lượng không khả dụng, thử lại sau",
           variant: "destructiveCustom",
         });
       } else {
         toast({
-          title: "Order sucess",
+          title: "Đặt hàng thành công",
           variant: "success",
         });
       }
@@ -66,7 +66,7 @@ function CheckoutForm() {
     } catch (error) {
       console.error("Payment error:", error);
       toast({
-        title: "Cancel payment",
+        title: "Đặt hàng thất bại",
         variant: "destructiveCustom",
       });
     } finally {
@@ -76,7 +76,7 @@ function CheckoutForm() {
 
   return (
     <div className="max-w-lg my-32 mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold text-center mb-6">Checkout</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Đặt hàng</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {Object.keys(formSchema.shape).map((field) => (
@@ -103,7 +103,7 @@ function CheckoutForm() {
             className="w-full bg-blue-500 text-white py-2 rounded font-bold hover:bg-blue-600"
             disabled={loading}
           >
-            {loading ? "Processing..." : "Confirm Order"}
+            {loading ? "Đang tiến hành..." : "Xác nhận đặt hàng"}
           </button>
         </form>
       </Form>

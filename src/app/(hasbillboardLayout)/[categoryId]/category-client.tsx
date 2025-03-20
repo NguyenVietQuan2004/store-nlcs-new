@@ -140,11 +140,11 @@ function CategoryClient({ listProductInit, limitServer, value }: CategoryClientP
     <>
       <div className=" text-sm mt-36 tracking-widest mb-2">
         {value ? (
-          <div className="text-sm font-medium text-[#111111]">Search result for</div>
+          <div className="text-sm font-medium text-[#111111]">Kết quả tìm kiếm cho</div>
         ) : (
           <BreadCrum
             listBread={[
-              { name: "Home", href: "/" },
+              { name: "Trang chủ", href: "/" },
               { name: `${items?.[0]?.category?.name || ""}`, href: `/${items?.[0]?.category?._id}` },
             ]}
           />
@@ -156,15 +156,15 @@ function CategoryClient({ listProductInit, limitServer, value }: CategoryClientP
         </div>
         <div className="hidden lg:flex items-center gap-8">
           <div>
-            <span className="text-[#a6a6a6]"> Showing </span>
-            {items?.length} of {listProduct?.data?.totalProduct}{" "}
+            <span className="text-[#a6a6a6]"> Hiển thị </span>
+            {items?.length} của {listProduct?.data?.totalProduct}{" "}
             <span className="text-[#a6a6a6]"> {items?.[0]?.categoryId?.name} </span>
           </div>
           <button className="flex items-center gap-1 font-medium" onClick={() => setIsShowFilter(!isShowFilter)}>
-            Hide filters <FilterIcon />{" "}
+            Ẩn bộ lọc <FilterIcon />{" "}
           </button>
           <div>
-            <span className="font-medium">Sort By:</span> <Combobox filter={filter} setFilter={setFilter} />
+            <span className="font-medium">Sắp xếp theo:</span> <Combobox filter={filter} setFilter={setFilter} />
           </div>
         </div>
         <FilterMobile
@@ -188,7 +188,7 @@ function CategoryClient({ listProductInit, limitServer, value }: CategoryClientP
               })
             }
           >
-            Clear Filters ({Object.values(filter).filter((item) => item).length})
+            Làm sạch bộ lọc ({Object.values(filter).filter((item) => item).length})
           </button>
           {listProductInit?.data?.listProduct[0]?.category.attributes.map((attribute, index) => {
             return (
@@ -204,7 +204,7 @@ function CategoryClient({ listProductInit, limitServer, value }: CategoryClientP
           })}
         </div>
         {!listProduct || !listProduct?.data?.listProduct?.length ? (
-          <div className="text-center flex-1 flex justify-center  items-center"> No results found</div>
+          <div className="text-center flex-1 flex justify-center  items-center"> Không có kết quả tìm thấy.</div>
         ) : (
           <>
             <ListProductCard isLoading={isLoading} gridCols={numColsGrid} listProduct={items} />
@@ -219,11 +219,11 @@ function CategoryClient({ listProductInit, limitServer, value }: CategoryClientP
           previousClassName={buttonVariants({ variant: "outline" })}
           activeLinkClassName="bg-black text-white"
           breakLabel="..."
-          nextLabel="next >"
+          nextLabel="Sau >"
           onPageChange={handlePageClick}
           pageRangeDisplayed={5}
           pageCount={Math.ceil((listProduct?.data?.totalProduct || 0) / limitClient)}
-          previousLabel="< previous"
+          previousLabel="< Trước"
           renderOnZeroPageCount={null}
           forcePage={currentPage.client - 1}
         />

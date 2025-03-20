@@ -39,18 +39,18 @@ const OrderList = () => {
 
   return (
     <div className="container mx-auto p-6 mt-24">
-      <h2 className="text-2xl font-semibold mb-4">Placed Orders</h2>
+      <h2 className="text-2xl font-semibold mb-4">Đơn hàng đã đặt</h2>
       {orders.length === 0 ? (
-        <p>No orders found.</p>
+        <p>Không có đơn hàng nào.</p>
       ) : (
         orders.map((order) => (
           <div key={order._id} className="border p-4 rounded-lg shadow-md mb-4">
             <h3 className="text-lg font-medium">
-              Order #{order._id.slice(-6)} - {order.is_paid ? "Paid" : "Unpaid"}
+              Đơn hàng #{order._id.slice(-6)} - {order.is_paid ? "Đã thanh toán" : "Chưa thanh toán"}
             </h3>
-            <p className="text-sm text-gray-500">Order Date: {new Date(order.createdAt).toLocaleDateString()}</p>
-            <p className="text-sm text-gray-500">Phone: {order.phone}</p>
-            <p className="text-sm text-gray-500">Address: {order.address}</p>
+            <p className="text-sm text-gray-500">Ngày đặt: {new Date(order.createdAt).toLocaleDateString()}</p>
+            <p className="text-sm text-gray-500">Số điện thoại: {order.phone}</p>
+            <p className="text-sm text-gray-500">Địa chỉ: {order.address}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
               {order.order_items.map((item: productOrderType) => (
@@ -64,11 +64,11 @@ const OrderList = () => {
                   )}
                   <h4 className="text-lg">{item.product.name}</h4>
                   <p className="text-gray-700">
-                    Price:{" "}
+                    Giá:{" "}
                     {formattedPrice(item.snapshot_price * item.quantity * ((100 - (item.product.sales || 0)) / 100))}
                   </p>
                   <p className={`text-sm ${item.quantity === 0 ? "text-red-500" : "text-green-600"}`}>
-                    {item.quantity > 0 ? `Quantity: ${item.quantity}` : "Out of stock"}
+                    {item.quantity > 0 ? `Số lượng: ${item.quantity}` : "Out of stock"}
                   </p>
                 </div>
               ))}

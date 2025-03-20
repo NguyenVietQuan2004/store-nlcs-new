@@ -154,7 +154,7 @@ function ProductInfor({ product, isShowChinhSach = true }: ProductInforProps) {
             disabled={currentSize.maxAmount === 0}
             size={"lg"}
           >
-            Add to cart <ShoppingCart className="ml-2" size={20} />
+            Thêm vào giỏ <ShoppingCart className="ml-2" size={20} />
           </Button>
 
           <Button
@@ -163,13 +163,13 @@ function ProductInfor({ product, isShowChinhSach = true }: ProductInforProps) {
             size={"lg"}
             variant={"outline"}
           >
-            Add to Favourite <HeartIcon className="ml-2 *:group-hover:stroke-yellow-400" width={20} height={20} />
+            Thêm vào yêu thích <HeartIcon className="ml-2 *:group-hover:stroke-yellow-400" width={20} height={20} />
           </Button>
         </div>
         {/* read more */}
         <Separator className="mt-8 mb-4" />
         <div>
-          <span className="opacity-50 font-light ">Category:</span>{" "}
+          <span className="opacity-50 font-light ">Danh mục:</span>{" "}
           <span className="font-normal">{product?.category?.name}</span>
         </div>
         {isShowChinhSach && <ChinhSach />}

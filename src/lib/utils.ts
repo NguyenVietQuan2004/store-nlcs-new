@@ -5,13 +5,17 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const formatter = new Intl.NumberFormat("en-US", {
+// const formatter = new Intl.NumberFormat("en-US", {
+//   style: "currency",
+//   currency: "USD",
+// });
+const formatter = new Intl.NumberFormat("vi-VN", {
   style: "currency",
-  currency: "USD",
+  currency: "VND",
 });
-
 export const formattedPrice = (price: number) => {
-  return formatter.format(price);
+  const roundedPrice = Math.round(price / 1000) * 1000; // Làm tròn đến hàng nghìn
+  return formatter.format(roundedPrice);
 };
 
 export const createUniqueArray = (length: number) => {

@@ -21,11 +21,11 @@ export const useFavourite = create(
         const existProduct = currentItems.find((item) => item._id === product._id);
         if (existProduct) {
           return toast({
-            title: "Product is already exist",
+            title: "Sản phẩm đã tồn tại",
           });
         }
         toast({
-          title: "Add to favourite success",
+          title: "Thêm vào yêu thích thành công",
           variant: "success",
         });
         set({ itemsFavourite: [...currentItems, product] });

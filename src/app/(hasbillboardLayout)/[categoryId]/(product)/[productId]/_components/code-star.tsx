@@ -23,7 +23,7 @@ function CodeStar({ maxAmount, id, sales }: { maxAmount: number; id: string; sal
         ))}
         <span className="text-sm font-light"> (1 đánh giá)</span>
       </div> */}
-      {sales > 0 && <span className="ml-4 text-[#007D48]">Sale: {sales}%</span>}
+      {sales > 0 && <span className="ml-4 text-[#007D48]">Khuyến mãi: {sales}%</span>}
     </div>
   );
 }

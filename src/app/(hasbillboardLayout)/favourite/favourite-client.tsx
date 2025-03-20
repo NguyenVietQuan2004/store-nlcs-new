@@ -9,7 +9,9 @@ function FavouriteClient() {
     <div className="">
       <ListProductCard gridCols={3} scroll={true} listProduct={itemsFavourite} />
       {!itemsFavourite.length && (
-        <div className="text-xl text-center underline">Items added to your Favourites will be saved here.</div>
+        <div className="text-xl text-center underline">
+          Các mục được thêm vào Yêu thích của bạn sẽ được lưu tại đây.
+        </div>
       )}
     </div>
   );

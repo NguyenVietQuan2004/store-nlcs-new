@@ -30,7 +30,7 @@ function ListProductCard({
     <>
       {!scroll && (
         <div
-          className={`flex-1 items-start relative mb-2  grid  gap-2 lg:gap-4 pb-10 `}
+          className={`flex-1 items-start   relative mb-2  grid gap-1 lg:gap-4 pb-10 `}
           style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
         >
           {listProduct?.map((product) => {
@@ -42,7 +42,7 @@ function ListProductCard({
       {/* overflow scroll */}
       {scroll && (
         <div
-          className={`flex-1 items-start mb-2 flex overflow-auto gap-2 lg:gap-4 pb-10 !scrollbar-track-gray-950 customScrollbar `}
+          className={`flex-1 items-start mb-2 flex overflow-auto gap-1 lg:gap-4 pb-10 !scrollbar-track-gray-950 customScrollbar `}
         >
           {listProduct?.map((product: ProductType) => {
             return (

@@ -46,11 +46,11 @@ function ProductIdClient({ data }: ProductIdClientProps) {
         listBread={[
           {
             href: "/",
-            name: "Home",
+            name: "Trang chủ",
           },
           {
             href: "",
-            name: "Product",
+            name: "Sản phẩm",
           },
           {
             href: "",
@@ -62,7 +62,7 @@ function ProductIdClient({ data }: ProductIdClientProps) {
         <ProductInfor product={product} />
         <Separator className="my-10" />
         <div>
-          <h2 className="text-xl font-bold my-4">YOU MIGHT ALSO LIKE</h2>
+          <h2 className="text-xl font-bold my-4">Bạn cũng có thể thích</h2>
           <ListProductCard gridCols={gridCols} listProduct={productRelative} />
         </div>
         <div>

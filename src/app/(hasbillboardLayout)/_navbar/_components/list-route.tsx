@@ -49,7 +49,7 @@ function ListRoute({ store, listCategory, listBillboard }: ListRouteProps) {
                 pathName === "/" ? "text-black" : " text-neutral-500"
               }  hover:text-black ml-4 text-sm font-medium `}
             >
-              Dashboard ✨
+              Trang chủ ✨
             </Link>
             {listCategory?.map((category: CategoryType) => {
               const active = pathName.startsWith(`/${category._id}`);

@@ -73,7 +73,7 @@ function UserAvatar() {
                 href={`/user-order`}
                 className={cn(buttonVariants({ variant: "outline", className: "text-black" }), "")}
               >
-                Your orders
+                Đơn hàng của tôi
               </Link>
               <Button
                 className={buttonVariants({
@@ -82,13 +82,13 @@ function UserAvatar() {
                 })}
                 onClick={handleLogOut}
               >
-                Sign out
+                Đăng xuất
               </Button>
             </div>
           </PopoverContent>
         </Popover>
       ) : (
-        <Link href="/auth"> Login </Link>
+        <Link href="/auth"> Đăng nhập </Link>
       )}
     </div>
   );

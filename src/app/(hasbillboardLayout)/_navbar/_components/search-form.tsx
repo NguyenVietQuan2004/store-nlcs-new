@@ -100,7 +100,7 @@ function SearchForm({ setIsShowSearch }: SearchFormProps) {
             </Form>
           </div>
           <Button className="font-medium text-[#111111]" variant={"outline"} onClick={() => setIsShowSearch(false)}>
-            Cancel
+            Hủy
           </Button>
         </div>
         <div className="flex justify-between lg:ml-10 items-center pt-9 lg:pb-12 lg:gap-x-48">

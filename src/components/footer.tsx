@@ -4,17 +4,23 @@ import { Separator } from "@/components/ui/separator";
 
 const list = [
   {
-    id: "Help",
-    data: ["Get Help", "Order Status", "Delivery", "Returns", "Payment Options", "Contact Us"],
+    id: "Hỗ Trợ",
+    data: [
+      "Nhận Trợ Giúp",
+      "Trạng Thái Đơn Hàng",
+      "Giao Hàng",
+      "Trả Hàng",
+      "Phương Thức Thanh Toán",
+      "Liên Hệ Chúng Tôi",
+    ],
   },
   {
-    id: "Resources",
-    data: ["Find A Store", "Become A Member", "Send Us Feedback"],
+    id: "Tài Nguyên",
+    data: ["Tìm Cửa Hàng", "Trở Thành Thành Viên", "Gửi Phản Hồi"],
   },
-
   {
-    id: "About Shop",
-    data: ["News", "Careers", "Investors", "Sustainability"],
+    id: "Về Cửa Hàng",
+    data: ["Tin Tức", "Tuyển Dụng", "Nhà Đầu Tư", "Phát Triển Bền Vững"],
   },
 ];
 
@@ -44,22 +50,22 @@ const Footer = () => {
           </div>
         </div>
         <Separator />
-        <div className="py-10 px-1 text-center md:flex md:items-center md:justify-between">
+        <div className="py-10 md:flex md:items-center md:justify-between">
           <div className="text-center md:text-left">
-            <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} All Rights Reserved</p>
+            <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Tất Cả Quyền Được Bảo Lưu</p>
           </div>
 
           <div className="mt-4 flex items-center justify-center md:mt-0">
             <div className="flex space-x-8">
               <div className="text-sm text-muted-foreground hover:text-gray-600">Hotline: 0763948610</div>
               <Link href="#" className="text-sm text-muted-foreground hover:text-gray-600">
-                Terms
+                Điều Khoản
               </Link>
               <Link href="#" className="text-sm text-muted-foreground hover:text-gray-600">
-                Privacy Policy
+                Chính Sách Bảo Mật
               </Link>
               <Link href="#" className="text-sm text-muted-foreground hover:text-gray-600">
-                Cookie Policy
+                Chính Sách Cookie
               </Link>
             </div>
           </div>

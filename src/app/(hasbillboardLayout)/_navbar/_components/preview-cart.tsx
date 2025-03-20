@@ -60,11 +60,9 @@ function PreviewCard() {
           >
             <div className="flex justify-between items-center ">
               <div className="font-bold text-[18px] flex gap-x-4 items-center">
-                <div className="">Shopping cart</div>
+                <div className="">Giỏ hàng</div>
                 <div className="bg-[#707072] w-[2px] h-[20px]"></div>
-                <div className="mb-[2px] font-medium text-[#707072] text-sm">
-                  {items.length} item{items.length > 1 && "s"}
-                </div>
+                <div className="mb-[2px] font-medium text-[#707072] text-sm">{items.length} sản phẩm</div>
               </div>
               <button onClick={() => setIsShowCartView(false)} className="p-5 pr-2">
                 <CloseIconMobile />
@@ -107,7 +105,7 @@ function PreviewCard() {
                         <div className="flex justify-between mt-auto">
                           <div className="text-[#707072] text-sm font-medium">QTY: {item.quantity}</div>
                           <button onClick={() => handleDeleteCart(item)} className="text-sm font-medium">
-                            Remove
+                            Xóa
                           </button>
                         </div>
                       </div>
@@ -121,9 +119,9 @@ function PreviewCard() {
               <Separator />
               <div className="p-2 lg:p-5 pb-5">
                 <div className="font-semibold flex justify-between">
-                  <span>Subtotal:</span> <span> {formattedPrice(totalPrice)}</span>
+                  <span>Tạm tính:</span> <span> {formattedPrice(totalPrice)}</span>
                 </div>
-                <div className="text-sm font-medium ">Shipping and taxes are calculated at checkout</div>
+                <div className="text-sm font-medium ">Phí vận chuyển và thuế sẽ được tính tại bước thanh toán.</div>
                 <Button
                   onClick={() => {
                     router.push("/cart");
@@ -133,7 +131,7 @@ function PreviewCard() {
                   className="w-full mt-4"
                   variant={"outline"}
                 >
-                  View cart page
+                  Xem trang giỏ hàng
                 </Button>
               </div>
             </div>

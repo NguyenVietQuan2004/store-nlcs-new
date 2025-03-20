@@ -33,7 +33,7 @@ function SearchInput() {
         <input
           readOnly
           className="outline-none hidden lg:block placeholder:text-[#838383] placeholder:font-medium   w-full  bg-transparent"
-          placeholder="Search"
+          placeholder="Tìm kiếm"
         />
       </div>
       {isShowSearch && <SearchForm isShowSearch={isShowSearch} setIsShowSearch={setIsShowSearch} />}
