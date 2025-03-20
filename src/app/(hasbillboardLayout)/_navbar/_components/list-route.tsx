@@ -40,7 +40,7 @@ function ListRoute({ store, listCategory, listBillboard }: ListRouteProps) {
               className="w-8"
               src={"https://res.cloudinary.com/dvyi5jxrm/image/upload/v1725116961/t2vvfvzknla0aw6oiagn.png"}
             />
-            {store?.name || "name store"}
+            <span className="text-[#3E3E3F]"> {store?.name || "name store"}</span>
           </Link>
           <div className="hidden lg:block">
             <Link
