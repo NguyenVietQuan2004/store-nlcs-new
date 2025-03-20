@@ -60,7 +60,7 @@ function CartClientNotSuspen() {
   useEffect(() => {
     if (searchParams.get("success")) {
       toast({
-        title: "Check out success",
+        title: "Order sucess",
         variant: "success",
       });
     }

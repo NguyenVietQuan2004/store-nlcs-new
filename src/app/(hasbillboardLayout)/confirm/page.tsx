@@ -53,12 +53,12 @@ function CheckoutForm() {
       const res = await response.json();
       if (res.statusCode === 401) {
         toast({
-          title: "Không đủ số lượng vui lòng thử lại sau.",
+          title: "Insufficient quantity please try again later",
           variant: "destructiveCustom",
         });
       } else {
         toast({
-          title: "Check out success",
+          title: "Order sucess",
           variant: "success",
         });
       }
