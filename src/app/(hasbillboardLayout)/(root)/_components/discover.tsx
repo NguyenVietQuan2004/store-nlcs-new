@@ -9,7 +9,6 @@ interface DiscoverProps {
 }
 
 function Discover({ data }: DiscoverProps) {
-  console.log(data?.data?.productBestSeller.length, "vvvv");
   return (
     <div className="bg-[#f4f4f4] pt-10 lg:pt-[80px] px-2 lg:px-20 py-10 text-[#111111]">
       {/* <h2 className=" font-semibold text-[32px]">Discover your next business opportunity</h2> */}

@@ -35,7 +35,6 @@ function UpdateSizeModalInfo({ productOrder, onClose }: UpdateSizeModalInfoProps
       },
       new: {
         product_variant_id: productOrder.product.product_variants.find((item) => {
-          // console.log(item.sku, currentSize.skuUserSelect);
           return item.sku === currentSize.skuUserSelect;
         })?._id!,
       },

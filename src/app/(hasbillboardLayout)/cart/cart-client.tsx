@@ -55,62 +55,7 @@ function CartClientNotSuspen() {
       if (!filterItemsOutOfStock.length) return;
       window.location.href = "/confirm";
     }
-    // const user = JSON.parse(storage)?.user;
-    // const response = await fetch(`${process.env.NEXT_PUBLIC_API_ADMIN}/checkout`, {
-    //   method: "POST",
-    //   body: JSON.stringify({ order: filterItemsOutOfStock, user_id: user?._id }),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // const data = await response.json();
-    // console.log(data);
-    // if (data.statusCode === 401) {
-    //   toast({
-    //     title: data.message || "",
-    //     variant: "destructiveCustom",
-    //   });
-    //   fetchAPI();
-    //   return;
-    // }
-    // window.location = data.url;
   };
-
-  // const handleCheckout = async () => {
-  //   const filterItemsOutOfStock = items.filter((item) => item.amount !== 0);
-  //   if (!filterItemsOutOfStock.length) return;
-
-  //   // Giả lập 3 người dùng đặt hàng cùng lúc bằng cách gọi 3 lần fetch song song
-  //   const fetchRequests = Array(3)
-  //     .fill(null)
-  //     .map(() =>
-  //       fetch(`${process.env.NEXT_PUBLIC_API_ADMIN}/checkout`, {
-  //         method: "POST",
-  //         body: JSON.stringify(filterItemsOutOfStock),
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //       })
-  //     );
-
-  //   //   // Chạy tất cả các lệnh fetch song song
-  //   const responses = await Promise.all(fetchRequests);
-
-  //   const data = await Promise.all(responses.map((res) => res.json()));
-
-  //   // Xử lý kết quả cho từng response
-  //   data.forEach((response) => {
-  //     if (response.statusCode === 401) {
-  //       toast({
-  //         title: response.message || "",
-  //         variant: "destructiveCustom",
-  //       });
-  //       fetchAPI(); // Reload hoặc fetch lại dữ liệu
-  //       return;
-  //     }
-  //     window.location = response.url;
-  //   });
-  // };
 
   useEffect(() => {
     if (searchParams.get("success")) {
@@ -147,7 +92,6 @@ function CartClientNotSuspen() {
             (objectPrice: any) => objectPrice._id === item.product_variant_id
           );
 
-          // totalPrice += (objectPrice?.price || 0) * item.amount || 0;
           totalPrice +=
             (item.snapshot_price || 0) * item.quantity * (item.product.sales ? (100 - item.product.sales) / 100 : 1);
 

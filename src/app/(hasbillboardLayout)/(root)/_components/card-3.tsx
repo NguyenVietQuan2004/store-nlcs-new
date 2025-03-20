@@ -10,7 +10,6 @@ interface Card3Props {
   productHighestSales: ListProductResType["data"]["listProduct"] | undefined;
 }
 function Card3({ productBestSeller, productHighestSales }: Card3Props) {
-  console.log(productBestSeller?.length, "aaa");
   const [numbProductShow, setNumbProductShow] = useState(3);
   useEffect(() => {
     const handleResize = () => {

@@ -72,14 +72,6 @@ function ProductCard({ product, title }: ProductCardProps) {
         <div>
           <div className="text-sm text-[#707072] font-semibold my-1"> {product.category.name} </div>
           <div className="flex items-end">
-            {/* <div className="mt-3 font-medium">{formattedPrice(price)} </div>
-
-            {product?.sales && (
-              <div className="text-[#e43647] text-[12px]">
-                {formattedPrice(product?.product_variants[0]?.price * ((100 - product.sales || 0) / 100))}
-              </div>
-            )} */}
-
             {product?.sales ? (
               <>
                 <div className="mt-3 font-medium">
