@@ -33,13 +33,6 @@ function ListRoute({ store, listCategory, listBillboard }: ListRouteProps) {
       <div className=" px-5 lg:px-10 py-3  border-b   fixed inset-x-0 top-0 bg-white/75 backdrop-blur-lg z-20">
         <div className="mx-auto items-center justify-between flex">
           <Link href="/" className="font-bold text-2xl flex items-center gap-x-2">
-            <Image
-              alt=""
-              width={200}
-              height={200}
-              className="w-8"
-              src={"https://res.cloudinary.com/dvyi5jxrm/image/upload/v1725116961/t2vvfvzknla0aw6oiagn.png"}
-            />
             <span className="text-[#3E3E3F]"> {store?.name || "name store"}</span>
           </Link>
           <div className="hidden lg:block">
