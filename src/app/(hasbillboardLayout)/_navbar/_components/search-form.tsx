@@ -61,13 +61,13 @@ function SearchForm({ setIsShowSearch }: SearchFormProps) {
       >
         <div className="flex justify-between items-center lg:gap-x-48 gap-x-2">
           <div className="hidden lg:block">
-            <Image
+            {/* <Image
               alt=""
               width={200}
               height={200}
               className="w-8"
               src={"https://res.cloudinary.com/dvyi5jxrm/image/upload/v1725116961/t2vvfvzknla0aw6oiagn.png"}
-            />
+            /> */}
           </div>
           <div className="flex  hover:bg-[#e6e6e6]  group  items-center bg-[#f5f5f5] p-2 pl-0 flex-1 h-[36px] rounded-full">
             <div className="mr-1 p-2 bg-transparent group-hover:hover:bg-[#d6d6d6] group-hover:bg-[#f3f3f3] rounded-full">

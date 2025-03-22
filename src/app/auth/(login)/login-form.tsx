@@ -263,13 +263,13 @@ function LoginForm({ isSignUp, setIsSignUp }: ResgisterFormProps) {
       </Form>
 
       <div className={`h-16 w-16 flex justify-center items-center mx-auto mt-4 lg:mt-2`}>
-        <Image
+        {/* <Image
           alt=""
           width={200}
           height={200}
           className="w-8 object-cover"
           src={"https://res.cloudinary.com/dvyi5jxrm/image/upload/v1725116961/t2vvfvzknla0aw6oiagn.png"}
-        />
+        /> */}
       </div>
     </div>
   );
