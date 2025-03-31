@@ -228,6 +228,7 @@ function LoginForm({ isSignUp, setIsSignUp }: ResgisterFormProps) {
               <FormItem className="w-full">
                 <FormControl>
                   <Input
+                    type="password"
                     placeholder="Mật khẩu"
                     {...field}
                     className="h-[52px] shadow-sm pl-4 border-b-2 border-zinc-100 w-full !ring-0 !ring-offset-0 !outline-none"
