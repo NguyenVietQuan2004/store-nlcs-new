@@ -106,11 +106,11 @@ function RegisterForm({ isSignUp, setIsSignUp }: ResgisterFormProps) {
           <FormField
             control={form.control}
             name="password"
-            type="password"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
                   <Input
+                    type="password"
                     placeholder="Password"
                     {...field}
                     className="h-[52px] !ring-0  !ring-offset-0 !outline-none pl-4 w-full"
