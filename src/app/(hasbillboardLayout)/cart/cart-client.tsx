@@ -27,13 +27,11 @@ function CartClientNotSuspen() {
   const { items, removeItem, onUpdateAmount, onUpdateWhenMounted } = useCart();
   const listIdProduct = items.map((item) => item.product._id);
 
-  // gọi api lấy lại thông tin sản phẩm mới nhất khi mounted tránh đang giữ thông tin cũ gây sai số lượng
   const fetchAPI = async () => {
     const data = await productAPI.getListByListId({ listIdProduct });
     if (data?.data) onUpdateWhenMounted(data?.data.listProduct);
   };
   const { addItemFavourite } = useFavourite();
-  // coi lại chỗ này
   useEffect(() => {
     if (isMounted === true) fetchAPI();
     setIsMounted(true);

@@ -11,7 +11,7 @@ import CategoryClient from "@/app/(hasbillboardLayout)/[categoryId]/category-cli
 function SearchResultClient() {
   const searchParams = useSearchParams();
   const [listProduct, setListProduct] = useState<ListProductResType | null>(null);
-  const limitServer = 48; // số lượng sản phẩm fetch về từ server
+  const limitServer = 48;
   const router = useRouter();
   useEffect(() => {
     const fetchAPI = async () => {
